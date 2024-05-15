@@ -1,0 +1,14 @@
+==3410245== Memcheck, a memory error detector
+==3410245== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3410245== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3410245== Command: ./pa3 pa3_examples/10_40.gr outputs/10_40.mcm outputs/10_40.cycle
+==3410245== Parent PID: 3410244
+==3410245== 
+==3410245== 
+==3410245== HEAP SUMMARY:
+==3410245==     in use at exit: 0 bytes in 0 blocks
+==3410245==   total heap usage: 161 allocs, 161 frees, 31,944 bytes allocated
+==3410245== 
+==3410245== All heap blocks were freed -- no leaks are possible
+==3410245== 
+==3410245== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

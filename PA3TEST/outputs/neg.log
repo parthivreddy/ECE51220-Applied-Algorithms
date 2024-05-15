@@ -1,0 +1,14 @@
+==561690== Memcheck, a memory error detector
+==561690== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==561690== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==561690== Command: ./pa3 pa3_examples/neg7_8.gr outputs/neg7_8.mcm outputs/neg7_8.cycle
+==561690== Parent PID: 561689
+==561690== 
+==561690== 
+==561690== HEAP SUMMARY:
+==561690==     in use at exit: 0 bytes in 0 blocks
+==561690==   total heap usage: 56 allocs, 56 frees, 27,644 bytes allocated
+==561690== 
+==561690== All heap blocks were freed -- no leaks are possible
+==561690== 
+==561690== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

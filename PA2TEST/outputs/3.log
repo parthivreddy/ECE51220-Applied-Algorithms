@@ -1,0 +1,14 @@
+==1483530== Memcheck, a memory error detector
+==1483530== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1483530== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1483530== Command: ./pa2 examples/3.txt outputs/3.dim outputs/3.pck outputs/3_all.dim outputs/3_all.pck
+==1483530== Parent PID: 1483529
+==1483530== 
+==1483530== 
+==1483530== HEAP SUMMARY:
+==1483530==     in use at exit: 0 bytes in 0 blocks
+==1483530==   total heap usage: 52 allocs, 52 frees, 44,424 bytes allocated
+==1483530== 
+==1483530== All heap blocks were freed -- no leaks are possible
+==1483530== 
+==1483530== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

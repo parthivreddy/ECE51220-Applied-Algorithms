@@ -1,0 +1,80 @@
+==33075== Memcheck, a memory error detector
+==33075== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==33075== Using Valgrind-3.15.0-608cb11914-20190413 and LibVEX; rerun with -h for copyright info
+==33075== Command: ./pa1 5 examples/fake_inv.param examples/fake_wire.param examples/3.txt outputs/3.pre outputs/3.elmore outputs/3.ttopo outputs/3.btopo
+==33075== Parent PID: 33073
+==33075== 
+--33075-- 
+--33075-- Valgrind options:
+--33075--    --tool=memcheck
+--33075--    --log-file=memcheck.txt
+--33075--    --leak-check=full
+--33075--    -s
+--33075--    --verbose
+--33075-- Contents of /proc/version:
+--33075--   Linux version 3.10.0-1160.95.1.el7.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) ) #1 SMP Mon Jul 24 13:59:37 UTC 2023
+--33075-- 
+--33075-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand
+--33075-- Page sizes: currently 4096, max supported 4096
+--33075-- Valgrind library directory: /usr/libexec/valgrind
+--33075-- Reading syms from /home/shay/a/reddy89/ECE51220/PA1TEST/pa1
+--33075-- Reading syms from /usr/lib64/ld-2.17.so
+--33075--   Considering /usr/lib/debug/.build-id/62/c449974331341bb08dcce3859560a22af1e172.debug ..
+--33075--   .. build-id is valid
+--33075-- Reading syms from /usr/libexec/valgrind/memcheck-amd64-linux
+--33075--    object doesn't have a symbol table
+--33075--    object doesn't have a dynamic symbol table
+--33075-- Scheduler: using generic scheduler lock implementation.
+--33075-- Reading suppressions file: /usr/libexec/valgrind/default.supp
+==33075== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-33075-by-reddy89-on-ececomp3.ecn.purdue.edu
+==33075== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-33075-by-reddy89-on-ececomp3.ecn.purdue.edu
+==33075== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-33075-by-reddy89-on-ececomp3.ecn.purdue.edu
+==33075== 
+==33075== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==33075== don't want to do, unless you know exactly what you're doing,
+==33075== or are doing some strange experiment):
+==33075==   /usr/libexec/valgrind/../../bin/vgdb --pid=33075 ...command...
+==33075== 
+==33075== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==33075==   /path/to/gdb ./pa1
+==33075== and then give GDB the following command
+==33075==   target remote | /usr/libexec/valgrind/../../bin/vgdb --pid=33075
+==33075== --pid is optional if only one valgrind process is running
+==33075== 
+--33075-- REDIR: 0x4019e40 (ld-linux-x86-64.so.2:strlen) redirected to 0x580c7ed5 (???)
+--33075-- REDIR: 0x4019c10 (ld-linux-x86-64.so.2:index) redirected to 0x580c7eef (???)
+--33075-- Reading syms from /usr/libexec/valgrind/vgpreload_core-amd64-linux.so
+--33075-- Reading syms from /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so
+==33075== WARNING: new redirection conflicts with existing -- ignoring it
+--33075--     old: 0x04019e40 (strlen              ) R-> (0000.0) 0x580c7ed5 ???
+--33075--     new: 0x04019e40 (strlen              ) R-> (2007.0) 0x04c2d1b0 strlen
+--33075-- REDIR: 0x4019dc0 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c2e300 (strcmp)
+--33075-- REDIR: 0x401aa80 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c31f90 (mempcpy)
+--33075-- Reading syms from /usr/lib64/libm-2.17.so
+--33075--   Considering /usr/lib/debug/.build-id/76/15604eaf4a068dfae5085444d15c0dee93dfbd.debug ..
+--33075--   .. build-id is valid
+--33075-- Reading syms from /usr/lib64/libc-2.17.so
+--33075--   Considering /usr/lib/debug/.build-id/94/70e279388f7f9cb2ed3b2872d0c2095b191ff4.debug ..
+--33075--   .. build-id is valid
+--33075-- REDIR: 0x51c91d0 (libc.so.6:strcasecmp) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--33075-- REDIR: 0x51c5f40 (libc.so.6:strnlen) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--33075-- REDIR: 0x51cb4d0 (libc.so.6:strncasecmp) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--33075-- REDIR: 0x51c89a0 (libc.so.6:memset) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--33075-- REDIR: 0x51c8950 (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--33075-- REDIR: 0x51c7930 (libc.so.6:__GI_strrchr) redirected to 0x4c2cb70 (__GI_strrchr)
+--33075-- REDIR: 0x51c5e60 (libc.so.6:__GI_strlen) redirected to 0x4c2d110 (__GI_strlen)
+--33075-- REDIR: 0x51be740 (libc.so.6:malloc) redirected to 0x4c29eec (malloc)
+--33075-- REDIR: 0x51dea10 (libc.so.6:__GI_strstr) redirected to 0x4c32220 (__strstr_sse2)
+--33075-- REDIR: 0x51beb60 (libc.so.6:free) redirected to 0x4c2afe6 (free)
+--33075-- REDIR: 0x51c8030 (libc.so.6:memchr) redirected to 0x4c2e3a0 (memchr)
+--33075-- REDIR: 0x51cdc30 (libc.so.6:__GI_memcpy) redirected to 0x4c2efb0 (__GI_memcpy)
+--33075-- REDIR: 0x51cf4b0 (libc.so.6:strchrnul) redirected to 0x4c31ab0 (strchrnul)
+--33075-- REDIR: 0x51c8b70 (libc.so.6:__GI_mempcpy) redirected to 0x4c31cc0 (__GI_mempcpy)
+==33075== 
+==33075== HEAP SUMMARY:
+==33075==     in use at exit: 0 bytes in 0 blocks
+==33075==   total heap usage: 39 allocs, 39 frees, 6,192 bytes allocated
+==33075== 
+==33075== All heap blocks were freed -- no leaks are possible
+==33075== 
+==33075== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
